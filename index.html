@@ -183,19 +183,30 @@
             <h2>Get In Touch</h2>
             <div class="contact-grid">
                 <div class="contact-form">
-                    <form name="contact" method="POST" netlify>
-                        <!-- Basic form setup -->
+                    <form name="contact" method="POST" data-netlify="true">
+                        <!-- Hidden input for form name -->
+                        <input type="hidden" name="form-name" value="contact" />
+                        
                         <p>
-                            <label>Name <input type="text" name="name" required /></label>
+                            <label>
+                                <span>Name:</span>
+                                <input type="text" name="name" required />
+                            </label>
                         </p>
                         <p>
-                            <label>Email <input type="email" name="email" required /></label>
+                            <label>
+                                <span>Email:</span>
+                                <input type="email" name="email" required />
+                            </label>
                         </p>
                         <p>
-                            <label>Message <textarea name="message" required></textarea></label>
+                            <label>
+                                <span>Message:</span>
+                                <textarea name="message" required></textarea>
+                            </label>
                         </p>
                         <p>
-                            <button type="submit" class="primary-button">Send</button>
+                            <button type="submit" class="primary-button">Send Message</button>
                         </p>
                     </form>
                 </div>
