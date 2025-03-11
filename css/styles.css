@@ -1183,3 +1183,29 @@ h2 {
 .hidden {
     display: none !important;
 }
+
+.success-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-color);
+    color: var(--text-color);
+}
+
+.success-page h1 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.success-page p {
+    margin-bottom: 1rem;
+}
+
+.success-page .primary-button {
+    margin-top: 2rem;
+    text-decoration: none;
+}
