@@ -183,23 +183,20 @@
             <h2>Get In Touch</h2>
             <div class="contact-grid">
                 <div class="contact-form">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <!-- Hidden input for bot protection -->
-                        <p class="hidden">
-                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    <form name="contact" method="POST" netlify>
+                        <!-- Basic form setup -->
+                        <p>
+                            <label>Name <input type="text" name="name" required /></label>
                         </p>
-                        
-                        <!-- Hidden input for form name -->
-                        <input type="hidden" name="form-name" value="contact" />
-                        
-                        <!-- Forward to email configuration -->
-                        <input type="hidden" name="recipient" value="getanim0@yahoo.com" />
-                        
-                        <!-- Your existing form fields -->
-                        <input type="text" id="name" name="name" placeholder="Name" required autocomplete="name">
-                        <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email">
-                        <textarea id="message" name="message" placeholder="Message" required></textarea>
-                        <button type="submit" class="primary-button">Send Message</button>
+                        <p>
+                            <label>Email <input type="email" name="email" required /></label>
+                        </p>
+                        <p>
+                            <label>Message <textarea name="message" required></textarea></label>
+                        </p>
+                        <p>
+                            <button type="submit" class="primary-button">Send</button>
+                        </p>
                     </form>
                 </div>
                 <div class="contact-info">
