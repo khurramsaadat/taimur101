@@ -19,32 +19,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form submission handling
-const contactForm = document.querySelector('.contact-form form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
-        // Add form validation
-        if (!data.email || !data.name || !data.message) {
-            alert('Please fill in all fields');
-            return;
-        }
-        
-        // Add email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(data.email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
-        
-        alert('Thank you for your message! We will get back to you soon.');
-        this.reset();
-    });
-}
-
 // Remove Intersection Observer since we simplified animations
 // Only keep button hover effects
 document.querySelectorAll('.cta-button, .primary-button, .secondary-button').forEach(button => {

@@ -183,9 +183,17 @@
             <h2>Get In Touch</h2>
             <div class="contact-grid">
                 <div class="contact-form">
-                    <form name="contact" method="POST" data-netlify="true" action="/success">
+                    <form name="contact" 
+                          method="POST" 
+                          data-netlify="true" 
+                          action="/success.html" 
+                          netlify-honeypot="bot-field">
                         <!-- Hidden input for form name -->
                         <input type="hidden" name="form-name" value="contact" />
+                        <!-- Honeypot field to prevent spam -->
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
                         
                         <p>
                             <label>
