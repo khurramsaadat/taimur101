@@ -1179,3 +1179,7 @@ h2 {
         justify-content: center;
     }
 }
+
+.hidden {
+    display: none !important;
+}
