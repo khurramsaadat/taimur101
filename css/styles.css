@@ -779,16 +779,13 @@ footer {
     text-justify: inter-word;
 }
 
-/* .about-image {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+/* Add mobile styles for bio-text */
+@media (max-width: 768px) {
+    .bio-text p {
+        text-align: left;
+        text-justify: none;
+    }
 }
-
-.about-image.animate {
-    animation: slideFromRight 1s ease forwards;
-} */
 
 .about-image img {
     width: 100%;
