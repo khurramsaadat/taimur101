@@ -590,10 +590,10 @@ footer {
         left: 0;
         right: 0;
         background: var(--primary-color);
-        padding: 0.5rem 1rem;    /* Reduced padding */
+        padding: 0.5rem 1rem;
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem;             /* Reduced space between links */
+        gap: 0.5rem;
         display: none;
     }
 
@@ -1397,5 +1397,41 @@ h2 {
     
     .level-card {
         padding: 1.5rem;
+    }
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 35px;
+        left: 0;
+        right: 0;
+        background: var(--primary-color);
+        padding: 0.5rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        display: none;
+        padding-left: 1rem;
+        background: rgba(18, 18, 37, 0.9);
+    }
+
+    .dropdown-content a {
+        padding: 0.5rem 1rem;
     }
 }

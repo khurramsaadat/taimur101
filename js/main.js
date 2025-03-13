@@ -33,47 +33,36 @@ document.querySelectorAll('.cta-button, .primary-button, .secondary-button').for
     });
 });
 
-// Burger Menu Toggle
+// Burger Menu Toggle with Dropdown support
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger-menu');
     const nav = document.querySelector('.nav-links');
+    const dropdownTrigger = document.querySelector('.dropdown-trigger');
     
     burger.addEventListener('click', () => {
         nav.classList.toggle('active');
         burger.classList.toggle('active');
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !burger.contains(e.target) && nav.classList.contains('active')) {
-            nav.classList.remove('active');
-            burger.classList.remove('active');
-        }
-    });
-
-    // Close menu when clicking a link
-    nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            burger.classList.remove('active');
-        });
-    });
-
     // Handle dropdown on mobile
-    const dropdownTrigger = document.querySelector('.dropdown-trigger');
-    const dropdownContent = document.querySelector('.dropdown-content');
-    
     if (dropdownTrigger) {
         dropdownTrigger.addEventListener('click', (e) => {
             e.preventDefault();
+            const dropdownContent = dropdownTrigger.nextElementSibling;
             dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
         });
     }
 
-    // Close dropdown when clicking outside
+    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!dropdownTrigger?.contains(e.target)) {
-            dropdownContent?.style.display = 'none';
+        if (!nav.contains(e.target) && !burger.contains(e.target)) {
+            nav.classList.remove('active');
+            burger.classList.remove('active');
+            // Close dropdown if open
+            const dropdownContent = document.querySelector('.dropdown-content');
+            if (dropdownContent) {
+                dropdownContent.style.display = 'none';
+            }
         }
     });
 });
