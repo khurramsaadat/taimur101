@@ -1,17 +1,17 @@
 /* Reset and Base Styles */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 :root {
-    --primary-color: #18181f;
+    --primary-color: #000000;
     --secondary-color: #4A6FFF;
     --accent-color: #8a2be2;
     --text-color: #FFFFFF;
     --dark-bg: #0F0F17;
-    --card-bg: #151520;
+    --card-bg: #13071f;
     --gradient: linear-gradient(135deg, #4A6FFF, #8A2BE2);
     --text-secondary: #e8e8ff;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -37,7 +37,7 @@ body {
     width: 100%;
     background-color: var(--primary-color);
     z-index: 1000;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 1px 2px rgb(255, 0, 0); */
 }
 
 .navbar .container {
@@ -779,7 +779,7 @@ footer {
     text-justify: inter-word;
 }
 
-.about-image {
+/* .about-image {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     -webkit-transition: all 1s ease;
@@ -788,7 +788,7 @@ footer {
 
 .about-image.animate {
     animation: slideFromRight 1s ease forwards;
-}
+} */
 
 .about-image img {
     width: 100%;
@@ -834,12 +834,12 @@ h2, .about-me h2 {
 h2:hover, .about-me h2:hover {
     transform: translateY(-2px);
     background: linear-gradient(135deg, #8A2BE2, #4A6FFF);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
+    /* background-size: 200% 200%; */
+    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent; /* Fallback */
-    letter-spacing: 0.5px;
+    letter-spacing:1px;
 }
 
 /* Heading Styles - H2 */
@@ -850,7 +850,7 @@ h2 {
     cursor: pointer;
     letter-spacing: normal;
     background: var(--gradient);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent; /* Fallback for browsers that don't support text-fill-color */
@@ -858,7 +858,7 @@ h2 {
 }
 
 
-/* Underline animation for all h2 */
+/* Underline animation for all h2
 h2::after {
     content: '';
     position: absolute;
@@ -869,7 +869,7 @@ h2::after {
     background: var(--gradient);
     transition: width 0.3s ease;
     opacity: 0;
-}
+} */
 
 h2:hover::after {
     width: 100%;
