@@ -58,6 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
             burger.classList.remove('active');
         });
     });
+
+    // Handle dropdown on mobile
+    const dropdownTrigger = document.querySelector('.dropdown-trigger');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    
+    if (dropdownTrigger) {
+        dropdownTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!dropdownTrigger?.contains(e.target)) {
+            dropdownContent?.style.display = 'none';
+        }
+    });
 });
 
 // Slide in animation for profile picture

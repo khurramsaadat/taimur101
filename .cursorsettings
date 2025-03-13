@@ -1,0 +1,61 @@
+{
+  "editor": {
+    "formatOnSave": true,
+    "tabSize": 2,
+    "insertSpaces": true,
+    "defaultFormatter": "prettier",
+    "wordWrap": "on"
+  },
+  "files": {
+    "exclude": {
+      "**/.git": true,
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/*.min.js": true,
+      "**/*.min.css": true
+    },
+    "associations": {
+      "*.js": "javascript",
+      "*.css": "css",
+      "*.html": "html"
+    }
+  },
+  "search": {
+    "exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/.git": true
+    }
+  },
+  "terminal": {
+    "integrated": {
+      "shell": {
+        "windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+      }
+    }
+  },
+  "git": {
+    "enabled": true,
+    "autofetch": true,
+    "confirmSync": true
+  },
+  "ai": {
+    "enabled": true,
+    "suggestions": {
+      "inline": true,
+      "autoComplete": true
+    },
+    "chat": {
+      "enabled": true,
+      "model": "claude-3-sonnet"
+    }
+  },
+  "workbench": {
+    "colorTheme": "Dark Modern",
+    "iconTheme": "material-icon-theme",
+    "tree": {
+      "indent": 16,
+      "renderIndentGuides": true
+    }
+  }
+} 

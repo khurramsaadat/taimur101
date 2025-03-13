@@ -1,0 +1,31 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+- I am using cursor ai as my default IDE
+- I am working on windows 11 so dont give me other OS related prompts/commands.
+Rule 1:
+- Name: "Format HTML"
+- File Pattern: "*.html"
+- Action: "Format Document"
+- When: "On Save"
+
+Rule 2:
+- Name: "Format CSS"
+- File Pattern: "*.css"
+- Action: "Format Document"
+- When: "On Save"
+
+Rule 3:
+- Name: "Format JavaScript"
+- File Pattern: "*.js"
+- Action: "Format Document"
+- When: "On Save"
+
+Rule 4:
+- Name: "Git Add on Save"
+- File Pattern: "*.*"
+- Action: "Run Command"
+- Command: "git add ${file}"
+- When: "On Save"

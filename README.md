@@ -110,5 +110,47 @@ For inquiries, reach out through:
 - Phone: +971 50585 0466
 - Location: Dubai, United Arab Emirates
 
+## 💻 Development Environment
+
+### System Requirements
+- Operating System: Windows 11
+- IDE: Cursor AI (Latest Version)
+- Git: Latest version
+- Web Browser: Modern browser (Chrome, Firefox, Edge recommended)
+
+### IDE Features Used
+- AI-powered code completion
+- Integrated Git support
+- Real-time syntax checking
+- Built-in terminal
+- Smart code navigation
+- Multi-cursor editing
+
+### Cursor Settings
+Project includes custom Cursor configuration files:
+- `.cursorsettings`: IDE preferences and configurations
+  - Format on save enabled
+  - 2-space indentation
+  - Dark Modern theme
+  - Git integration settings
+  - AI features configuration
+- `.cursorignore`: Files excluded from IDE
+  - Build outputs
+  - Dependencies
+  - System files
+  - Environment files
+  - Cache and logs
+
+### Setup Instructions
+1. Install Cursor AI IDE
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/khurramsaadat/taimur101.git
+   ```
+3. Open project in Cursor AI
+4. Cursor will automatically load project settings
+5. Use integrated terminal for Git operations
+6. Enable AI features for enhanced development
+
 ---
 Built with ❤️ for Taimur Saadat | Last Updated: March 2025
