@@ -1612,7 +1612,7 @@ h2 {
     grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
     margin: 2rem 0;
-    min-height: 800px; /* Increased height */
+    min-height: 800px;
 }
 
 .study-selector {
@@ -1620,7 +1620,7 @@ h2 {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
-    height: 800px; /* Match the grid height */
+    height: 800px;
 }
 
 .pdf-viewer {
@@ -1628,7 +1628,7 @@ h2 {
     background: var(--card-bg);
     border-radius: 10px;
     padding: 1.5rem;
-    height: 800px; /* Match the grid height */
+    height: 800px;
 }
 
 .study-cards {
@@ -1697,22 +1697,51 @@ h2 {
 
 @media screen and (max-width: 968px) {
     .studies-grid {
+        display: flex;
+        flex-direction: column;
         min-height: auto;
+        gap: 2rem;
+        margin-bottom: 3rem; /* Added extra margin at bottom */
     }
     
-    .study-selector,
-    .pdf-viewer {
+    .study-selector {
+        order: 1;
+        min-height: 300px;
         height: auto;
+        width: 100%;
+        position: relative;
+    }
+    
+    .select-options {
+        max-height: 250px;
+        overflow-y: auto;
+    }
+    
+    .pdf-viewer {
+        order: 2;
+        height: 700px; /* Increased height */
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 2rem; /* Added margin at bottom */
     }
 
-    .study-cards {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .pdf-container iframe {
+        height: 650px; /* Adjusted iframe height */
     }
 }
 
 @media screen and (max-width: 480px) {
     .study-cards {
         grid-template-columns: 1fr;
+    }
+    
+    .study-selector {
+        min-height: 250px;
+    }
+    
+    .studies-grid {
+        gap: 2.5rem;
+        margin-bottom: 4rem; /* Even more margin for smallest screens */
     }
 }
 
