@@ -50,15 +50,20 @@ body {
 
 /* Logo styles */
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.logo:hover {
-    color: #4A6FFF;
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
 }
 
 /* Navigation links */
@@ -87,12 +92,12 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #4A6FFF;
+    background-color: var(--secondary-color);
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #4A6FFF;
+    color: var(--secondary-color);
 }
 
 .nav-links a:hover::after {
@@ -556,6 +561,27 @@ footer {
     padding-top: 2rem;
     border-top: 1px solid rgba(74, 111, 255, 0.1);
     color: var(--text-secondary);
+}
+
+/* Footer logo styles */
+.footer-logo {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.footer-logo .logo-img {
+    height: 50px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 30px; /* Smaller on mobile */
+    }
+    
+    .footer-logo .logo-img {
+        height: 40px;
+    }
 }
 
 /* Responsive Design */
@@ -1135,8 +1161,16 @@ h2 {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #3498db;
+    background-color: var(--secondary-color);
     transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Add vendor prefixes for background-clip */

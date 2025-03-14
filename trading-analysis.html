@@ -12,7 +12,9 @@
     <!-- Navbar (same as main page) -->
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Taimur Saadat</a>
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo_taimur.png" alt="Taimur Saadat Finance" class="logo-img">
+            </a>
             <div class="nav-links">
                 <a href="index.html#home">Home</a>
                 <a href="index.html#services">Services</a>
@@ -170,9 +172,37 @@
         <div class="container">
             <h2>Ready to Start Your Journey?</h2>
             <p>Join our comprehensive Trading and Technical Analysis Course</p>
-            <div class="cta-buttons">
+            <!-- <div class="cta-buttons">
                 <a href="#contact" class="primary-button">Enroll Now</a>
                 <a href="#" class="secondary-button">Download Syllabus</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <!-- <h2>Get In Touch</h2> -->
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form name="contact" method="POST" data-netlify="true" action="/success.html">
+                        <input type="hidden" name="form-name" value="contact">
+                        <!-- Honeypot field for spam prevention -->
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="primary-button">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-envelope"></i> taimur101@yahoo.com</p>
+                    <p><i class="fas fa-phone"></i> +971 50585 0466</p>
+                    <p><i class="fas fa-location-dot"></i> Dubai, United Arab Emirates</p>
+                </div>
             </div>
         </div>
     </section>
