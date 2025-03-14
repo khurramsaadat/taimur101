@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feasibility Studies - Taimur Saadat Finance</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/Logo_taimur.png" alt="Taimur Saadat Finance" class="logo-img">
+            </a>
+            <div class="nav-links">                
+                <div class="dropdown">
+                    <a href="#" class="dropdown-trigger">Courses</a>
+                    <div class="dropdown-content">
+                        <a href="trading-analysis.html">Trading and Technical Analysis</a>
+                        <a href="index.html#derivatives">Derivatives</a>
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <a href="#" class="dropdown-trigger">Feasibility Studies</a>
+                    <div class="dropdown-content">
+                        <a href="feasibilities.html">Feasibility Studies</a>
+                    </div>
+                </div>
+                
+                <a href="index.html#education">Education</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Feasibility Studies Section -->
+    <section class="feasibility-hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Feasibility Studies</h1>
+                <p class="section-intro">Comprehensive analysis and research for informed business decisions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Viewer Section -->
+    <section class="feasibility-studies">
+        <div class="container">
+            <div class="studies-grid">
+                <!-- Left Side - Study Selector -->
+                <div class="study-selector">
+                    <div class="custom-select">
+                        <div class="select-header">
+                            <span class="select-label">Select a Study</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="select-options">
+                            <div class="select-option" data-value="Buy_Refurb_Rent_Sell">
+                                <i class="fas fa-building"></i>
+                                <span>Buy, Refurbish, Rent, Sell Study</span>
+                            </div>
+                            <div class="select-option" data-value="Digital_Entity">
+                                <i class="fas fa-globe"></i>
+                                <span>Digital Entity Study</span>
+                            </div>
+                            <div class="select-option" data-value="Event_Management">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Event Management Study</span>
+                            </div>
+                            <div class="select-option" data-value="Manuka_Honey">
+                                <i class="fas fa-flask"></i>
+                                <span>Manuka Honey Study</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - PDF Viewer -->
+                <div class="pdf-viewer">
+                    <div id="pdfContainer" class="pdf-container" style="display: none;">
+                        <div class="pdf-header">
+                            <h3 id="studyTitle"></h3>
+                            <a id="downloadBtn" class="download-btn">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                        <iframe id="pdfFrame" width="100%" height="800px"></iframe>
+                    </div>
+                    <div id="initialMessage" class="initial-message">
+                        <i class="fas fa-file-pdf"></i>
+                        <p>Select a study from the left to view its contents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Taimur Saadat</h3>
+                    <p>Strategic investing with a focus on growth and risk control</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="feasibilities.html">Feasibility Studies</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#education">Education</a>
+                    <a href="trading-analysis.html">Trading Course</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Socials</h3>
+                    <div class="social-links">
+                        <a href="https://x.com/taimur101" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x"></i></a>
+                        <a href="https://www.linkedin.com/in/taimur-saadat-cmt-mba-msc-finance-59151813/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Taimur Saadat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Define the studies object
+            const studies = {
+                'Buy_Refurb_Rent_Sell': {
+                    title: 'Buy, Refurbish, Rent, Sell Study',
+                    path: 'assets/pdf/Buy_Refurb_Rent_Sell Study.pdf'
+                },
+                'Digital_Entity': {
+                    title: 'Digital Entity Study',
+                    path: 'assets/pdf/Digital Entity.pdf'
+                },
+                'Event_Management': {
+                    title: 'Event Management Study',
+                    path: 'assets/pdf/Event management.pdf'
+                },
+                'Manuka_Honey': {
+                    title: 'Manuka Honey Study',
+                    path: 'assets/pdf/Manuka Honey.pdf'
+                }
+            };
+
+            // Get all required elements
+            const customSelect = document.querySelector('.custom-select');
+            const pdfContainer = document.getElementById('pdfContainer');
+            const initialMessage = document.getElementById('initialMessage');
+            const pdfFrame = document.getElementById('pdfFrame');
+            const studyTitle = document.getElementById('studyTitle');
+            const downloadBtn = document.getElementById('downloadBtn');
+
+            if (customSelect) {
+                const selectHeader = customSelect.querySelector('.select-header');
+                const selectOptions = customSelect.querySelector('.select-options');
+                const options = customSelect.querySelectorAll('.select-option');
+                const selectLabel = customSelect.querySelector('.select-label');
+
+                // Toggle options visibility
+                selectHeader.addEventListener('click', () => {
+                    customSelect.classList.toggle('active');
+                });
+
+                // Handle option selection
+                options.forEach(option => {
+                    option.addEventListener('click', () => {
+                        const studyId = option.dataset.value;
+                        const selectedStudy = studies[studyId];
+                        
+                        // Update selected option
+                        selectLabel.textContent = option.querySelector('span').textContent;
+                        
+                        // Remove selected class from all options
+                        options.forEach(opt => opt.classList.remove('selected'));
+                        // Add selected class to clicked option
+                        option.classList.add('selected');
+                        
+                        // Close dropdown
+                        customSelect.classList.remove('active');
+                        
+                        // Update PDF viewer
+                        if (selectedStudy) {
+                            pdfContainer.style.display = 'block';
+                            initialMessage.style.display = 'none';
+                            studyTitle.textContent = selectedStudy.title;
+                            pdfFrame.src = selectedStudy.path;
+                            downloadBtn.href = selectedStudy.path;
+                        }
+                    });
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!customSelect.contains(e.target)) {
+                        customSelect.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

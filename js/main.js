@@ -34,37 +34,37 @@ document.querySelectorAll('.cta-button, .primary-button, .secondary-button').for
 });
 
 // Burger Menu Toggle with Dropdown support
-document.addEventListener('DOMContentLoaded', function() {
-    // Burger menu functionality
+document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger-menu');
     const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links a');
-
+    const dropdownTrigger = document.querySelector('.dropdown-trigger');
+    
     burger.addEventListener('click', () => {
-        // Toggle navigation
         nav.classList.toggle('active');
         burger.classList.toggle('active');
     });
+
+    // Handle dropdown on mobile
+    if (dropdownTrigger) {
+        dropdownTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const dropdownContent = dropdownTrigger.nextElementSibling;
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+    }
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !burger.contains(e.target)) {
             nav.classList.remove('active');
             burger.classList.remove('active');
+            // Close dropdown if open
+            const dropdownContent = document.querySelector('.dropdown-content');
+            if (dropdownContent) {
+                dropdownContent.style.display = 'none';
+            }
         }
     });
-
-    // Handle dropdown in mobile view
-    const dropdownTrigger = document.querySelector('.dropdown-trigger');
-    const dropdownContent = document.querySelector('.dropdown-content');
-
-    if (window.innerWidth <= 768) {
-        dropdownTrigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            dropdownContent.style.display = 
-                dropdownContent.style.display === 'none' ? 'block' : 'none';
-        });
-    }
 });
 
 // Slide in animation for profile picture
@@ -91,5 +91,83 @@ document.addEventListener('DOMContentLoaded', () => {
     if (aboutImage) {
         console.log('Found about image'); // Debug log
         observer.observe(aboutImage);
+    }
+});
+
+// Add this to your existing JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // First define the studies object
+    const studies = {
+        'Buy_Refurb_Rent_Sell': {
+            title: 'Buy, Refurbish, Rent, Sell Study',
+            path: 'assets/pdf/Buy_Refurb_Rent_Sell Study.pdf'
+        },
+        'Digital_Entity': {
+            title: 'Digital Entity Study',
+            path: 'assets/pdf/Digital Entity.pdf'
+        },
+        'Event_Management': {
+            title: 'Event Management Study',
+            path: 'assets/pdf/Event management.pdf'
+        },
+        'Manuka_Honey': {
+            title: 'Manuka Honey Study',
+            path: 'assets/pdf/Manuka Honey.pdf'
+        }
+    };
+
+    // Get all required elements
+    const customSelect = document.querySelector('.custom-select');
+    const pdfContainer = document.getElementById('pdfContainer');
+    const initialMessage = document.getElementById('initialMessage');
+    const pdfFrame = document.getElementById('pdfFrame');
+    const studyTitle = document.getElementById('studyTitle');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    if (customSelect) {
+        const selectHeader = customSelect.querySelector('.select-header');
+        const selectOptions = customSelect.querySelector('.select-options');
+        const options = customSelect.querySelectorAll('.select-option');
+        const selectLabel = customSelect.querySelector('.select-label');
+
+        // Toggle options visibility
+        selectHeader.addEventListener('click', () => {
+            customSelect.classList.toggle('active');
+        });
+
+        // Handle option selection
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                const studyId = option.dataset.value;
+                const selectedStudy = studies[studyId];
+                
+                // Update selected option
+                selectLabel.textContent = option.querySelector('span').textContent;
+                
+                // Remove selected class from all options
+                options.forEach(opt => opt.classList.remove('selected'));
+                // Add selected class to clicked option
+                option.classList.add('selected');
+                
+                // Close dropdown
+                customSelect.classList.remove('active');
+                
+                // Update PDF viewer
+                if (selectedStudy) {
+                    pdfContainer.style.display = 'block';
+                    initialMessage.style.display = 'none';
+                    studyTitle.textContent = selectedStudy.title;
+                    pdfFrame.src = selectedStudy.path;
+                    downloadBtn.href = selectedStudy.path;
+                }
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!customSelect.contains(e.target)) {
+                customSelect.classList.remove('active');
+            }
+        });
     }
 }); 
