@@ -1364,28 +1364,35 @@ h2 {
     background: var(--card-bg);
     border-radius: 10px;
     padding: 2rem;
-    margin-bottom: 2rem;
-    border: 1px solid rgba(74, 111, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
 }
 
 .level-card h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
 }
 
 .level-content ul {
     list-style: none;
-    padding: 0;
+    padding-left: 0;
 }
 
 .level-content li {
     margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
     position: relative;
+    padding-left: 1.5rem;
 }
 
-.level-content li::before {
-    content: '→';
+.level-content li:before {
+    content: "→";
     position: absolute;
     left: 0;
     color: var(--secondary-color);
@@ -1468,4 +1475,50 @@ h2 {
     .dropdown-content a {
         padding: 0.5rem 1rem;
     }
+}
+
+/* Course Structure Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.level-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
+}
+
+.level-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.level-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.level-content li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.level-content li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
 }
