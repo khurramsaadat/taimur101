@@ -34,37 +34,37 @@ document.querySelectorAll('.cta-button, .primary-button, .secondary-button').for
 });
 
 // Burger Menu Toggle with Dropdown support
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Burger menu functionality
     const burger = document.querySelector('.burger-menu');
     const nav = document.querySelector('.nav-links');
-    const dropdownTrigger = document.querySelector('.dropdown-trigger');
-    
+    const navLinks = document.querySelectorAll('.nav-links a');
+
     burger.addEventListener('click', () => {
+        // Toggle navigation
         nav.classList.toggle('active');
         burger.classList.toggle('active');
     });
-
-    // Handle dropdown on mobile
-    if (dropdownTrigger) {
-        dropdownTrigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            const dropdownContent = dropdownTrigger.nextElementSibling;
-            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-        });
-    }
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !burger.contains(e.target)) {
             nav.classList.remove('active');
             burger.classList.remove('active');
-            // Close dropdown if open
-            const dropdownContent = document.querySelector('.dropdown-content');
-            if (dropdownContent) {
-                dropdownContent.style.display = 'none';
-            }
         }
     });
+
+    // Handle dropdown in mobile view
+    const dropdownTrigger = document.querySelector('.dropdown-trigger');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    if (window.innerWidth <= 768) {
+        dropdownTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownContent.style.display = 
+                dropdownContent.style.display === 'none' ? 'block' : 'none';
+        });
+    }
 });
 
 // Slide in animation for profile picture
