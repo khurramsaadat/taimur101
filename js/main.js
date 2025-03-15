@@ -19,8 +19,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Remove Intersection Observer since we simplified animations
-// Only keep button hover effects
+// Button hover effects
 document.querySelectorAll('.cta-button, .primary-button, .secondary-button').forEach(button => {
     button.addEventListener('mouseover', function() {
         this.style.transform = 'translateY(-2px)';
@@ -33,23 +32,29 @@ document.querySelectorAll('.cta-button, .primary-button, .secondary-button').for
     });
 });
 
-// Burger Menu Toggle with Dropdown support
+// Mobile menu and dropdown functionality
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger-menu');
     const nav = document.querySelector('.nav-links');
-    const dropdownTrigger = document.querySelector('.dropdown-trigger');
+    const dropdowns = document.querySelectorAll('.dropdown');
     
+    // Burger menu toggle
     burger.addEventListener('click', () => {
         nav.classList.toggle('active');
         burger.classList.toggle('active');
     });
 
-    // Handle dropdown on mobile
-    if (dropdownTrigger) {
-        dropdownTrigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            const dropdownContent = dropdownTrigger.nextElementSibling;
-            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    // Mobile-only dropdown functionality
+    if (window.innerWidth <= 768) {
+        dropdowns.forEach(dropdown => {
+            const trigger = dropdown.querySelector('.dropdown-trigger');
+            
+            if (trigger) {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                });
+            }
         });
     }
 
@@ -58,11 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!nav.contains(e.target) && !burger.contains(e.target)) {
             nav.classList.remove('active');
             burger.classList.remove('active');
-            // Close dropdown if open
-            const dropdownContent = document.querySelector('.dropdown-content');
-            if (dropdownContent) {
-                dropdownContent.style.display = 'none';
-            }
+            // Close dropdowns if open
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
         }
     });
 });
