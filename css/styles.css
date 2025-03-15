@@ -1847,3 +1847,187 @@ h2 {
 .select-option.selected i {
     color: #ffffff;
 }
+
+/* Derivatives Page Styles */
+.derivatives-hero {
+    background: var(--primary-color);
+    padding: 100px 0 50px;
+    text-align: center;
+}
+
+.derivatives-hero .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.derivatives-hero h1 {
+    background: linear-gradient(45deg, #ffffff, #66a6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    animation: gradientMove 3s ease infinite;
+    text-align: center;
+}
+
+.derivatives-hero .hero-subtitle {
+    color: #ffffff;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .derivatives-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .derivatives-hero .hero-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+}
+
+.derivatives-content {
+    padding: 4rem 0;
+}
+
+.content-section {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.content-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.content-section h3 {
+    color: var(--text-color);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.4rem;
+}
+
+.course-list, .feature-list, .investor-types {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.course-list li, .feature-list li, .investor-types li {
+    position: relative;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+}
+
+.course-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.highlight-text {
+    background: rgba(var(--secondary-color-rgb), 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    font-weight: 500;
+}
+
+.outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.outcome-card {
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.outcome-card h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .derivatives-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    .outcome-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Derivatives Page Responsive Styles */
+@media screen and (max-width: 968px) {
+    .derivatives-content {
+        padding: 2rem 0;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .content-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .outcome-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .outcome-card {
+        padding: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .derivatives-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-section {
+        padding: 1.2rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .content-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .course-list li, 
+    .feature-list li, 
+    .investor-types li {
+        padding-left: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+}

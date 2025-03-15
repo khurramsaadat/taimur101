@@ -1,156 +1,117 @@
-# Taimur Saadat Finance
+# Taimur Saadat Finance Website
 
-A professional finance and investment website showcasing expertise in strategic investing, risk management, and financial planning.
+A comprehensive financial services website showcasing investment expertise, trading courses, and professional services.
 
-## 🌐 Live Site
-[Visit the website](https://taimur101.netlify.app/)
+## Features
 
-## ✨ Features
+- Responsive design optimized for all devices
+- Modern navigation with dropdown menus
+- Interactive course sections:
+  - Trading and Technical Analysis Course
+  - Derivatives and Portfolio Management
+  - Feasibility Studies Viewer
+- PDF document viewer for feasibility studies
+- Contact form with Netlify integration
+- Success page for form submissions
+- Social media integration
 
-- **Modern Design**: Clean and professional UI with dark theme
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Interactive Elements**: 
-  - Smooth scrolling navigation
-  - Animated section transitions
-  - Mobile-friendly burger menu
-  - Hover effects on cards and buttons
-- **Contact Form**: Netlify-powered contact form with:
-  - Email notifications via Make.com integration
-  - Multi-recipient email forwarding
-  - Spam protection with honeypot
-  - Success page redirect
-  - Form validation
-  - Secure data handling
-- **SEO Optimized**: 
-  - Meta tags for better search engine visibility
-  - Custom Open Graph images
-  - Optimized page titles and descriptions
-- **Social Media Integration**: 
-  - Open Graph tags for social sharing
-  - Social media preview cards
-  - Integrated social links (Twitter, LinkedIn, Facebook)
-- **Performance Optimized**:
-  - Lazy loading images
-  - Optimized assets
-  - Fast loading times
-  - Minified CSS and JavaScript
-
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML5
-- CSS3 (Custom animations and transitions)
-- JavaScript (Vanilla JS for interactions)
-- Font Awesome Icons
-- Netlify (Hosting & Forms)
-- Make.com (Form automation & notifications)
+- CSS3 with modern features:
+  - CSS Grid
+  - Flexbox
+  - CSS Variables
+  - Animations
+- JavaScript for interactive features
+- Netlify for hosting and form handling
+- Make.com for form notifications
 
-## 📱 Sections
+## Development Environment
 
-1. **Hero Section**: Strategic investing focus with call-to-action buttons
-2. **Features**: Advanced Analytics, Secure Trading, and AI-Powered solutions
-3. **Market Trends**: Global Markets, Cryptocurrency, and Forex Trading insights
-4. **Testimonials**: Client feedback and success stories
-5. **About**: Professional background and expertise
-6. **Education**: Academic qualifications and certifications
-7. **Contact**: Interactive form with direct contact information
-
-## 📧 Contact Form & Automation
-
-The contact form system utilizes multiple services for reliable communication:
-
-### Netlify Forms
-- Form data collection and storage
-- Spam prevention with honeypot field
-- Custom success page redirect
-- Built-in form validation
-
-### Make.com Integration
-- Automated email forwarding
-- Multiple recipient configuration
-- Custom email formatting
-- Reliable delivery system
-- Backup notification system
-
-### Email Configuration
-- Primary: getanim0@yahoo.com
-- Secondary: taimur101@yahoo.com
-- Notification format includes:
-  - Sender's name
-  - Email address
-  - Message content
-  - Timestamp
-
-## 🚀 Deployment
-
-The site is deployed on Netlify with:
-- Continuous deployment from GitHub
-- Automatic builds on push
-- Form handling and data management
-- Custom domain configuration
-- SSL certificate
-- Branch previews
-
-## 🔒 Security Features
-
-- SSL/TLS encryption
-- Form spam protection
-- Secure data transmission
-- Protected email addresses
-- Honeypot fields
-- Secure asset delivery
-
-## 📄 License
-
-© 2025 Taimur Saadat. All rights reserved.
-
-## 📞 Contact
-
-For inquiries, reach out through:
-- Email: taimur101@yahoo.com
-- Phone: +971 50585 0466
-- Location: Dubai, United Arab Emirates
-
-## 💻 Development Environment
-
-### System Requirements
 - Operating System: Windows 11
-- IDE: Cursor AI (Latest Version)
-- Git: Latest version
-- Web Browser: Modern browser (Chrome, Firefox, Edge recommended)
+- IDE: Cursor AI
+- Version Control: Git
+- Browser Support: Chrome, Firefox, Safari, Edge
 
-### IDE Features Used
+### Cursor AI Settings
+- Custom .cursorsettings for project configuration
 - AI-powered code completion
 - Integrated Git support
-- Real-time syntax checking
-- Built-in terminal
-- Smart code navigation
-- Multi-cursor editing
+- Enhanced code navigation
 
-### Cursor Settings
-Project includes custom Cursor configuration files:
-- `.cursorsettings`: IDE preferences and configurations
-  - Format on save enabled
-  - 2-space indentation
-  - Dark Modern theme
-  - Git integration settings
-  - AI features configuration
-- `.cursorignore`: Files excluded from IDE
-  - Build outputs
-  - Dependencies
-  - System files
-  - Environment files
-  - Cache and logs
+## Pages
 
-### Setup Instructions
-1. Install Cursor AI IDE
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/khurramsaadat/taimur101.git
-   ```
-3. Open project in Cursor AI
-4. Cursor will automatically load project settings
-5. Use integrated terminal for Git operations
-6. Enable AI features for enhanced development
+1. Home Page (index.html)
+   - Hero section
+   - Features
+   - Market Trends
+   - Testimonials
+   - About
+   - Education
+   - Contact Form
 
----
-Built with ❤️ for Taimur Saadat | Last Updated: March 2025
+2. Trading Analysis (trading-analysis.html)
+   - Course Structure
+   - Learning Objectives
+   - Course Content
+   - Registration
+
+3. Derivatives (derivatives.html)
+   - Comprehensive course content
+   - Portfolio Management
+   - Structured Products
+   - Asset Allocation
+   - Equity Trading
+
+4. Feasibility Studies (feasibilities.html)
+   - Interactive PDF viewer
+   - Multiple study options
+   - Download functionality
+
+5. Success Page (success.html)
+   - Form submission confirmation
+
+## Security Features
+
+- Form spam protection
+- Secure file handling
+- Protected contact information
+- Secure PDF viewing
+
+## Contact Integration
+
+- Netlify Forms
+- Make.com automation
+- Email notifications
+- Success page redirects
+
+## Setup Instructions
+
+1. Clone the repository
+2. Install dependencies (if any)
+3. Configure Netlify forms
+4. Set up Make.com integration
+5. Deploy to hosting
+
+## Maintenance
+
+Regular updates for:
+- Content freshness
+- Security patches
+- Performance optimization
+- Browser compatibility
+
+## Contributing
+
+Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is proprietary and all rights are reserved.
+
+## Contact
+
+Taimur Saadat
+- Email: taimur101@yahoo.com
+- Location: Dubai, UAE
