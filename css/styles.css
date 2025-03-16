@@ -445,10 +445,28 @@ body {
 }
 
 .testimonial-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+    width: 200px;  /* Increased from 80px */
+    height: 200px; /* Make it square */
+    border-radius: 10px; /* Changed from 50% to make it square with slightly rounded corners */
+    margin-bottom: 1.5rem;
+    object-fit: cover; /* Ensure image covers the area without distortion */
+    box-shadow: 0 4px 15px rgba(74, 111, 255, 0.2);
+    border: 2px solid var(--secondary-color);
+}
+
+/* Responsive adjustments for testimonial images */
+@media (max-width: 768px) {
+    .testimonial-card img {
+        width: 150px;  /* Slightly smaller on mobile but still square */
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card img {
+        width: 120px;  /* Even smaller on very small screens */
+        height: 120px;
+    }
 }
 
 /* Contact Section */
