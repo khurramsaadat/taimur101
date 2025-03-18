@@ -204,4 +204,65 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// Add this to your js/main.js file
+document.addEventListener('DOMContentLoaded', function() {
+    const sliderContainer = document.querySelector('.slider-container');
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.nav-dot');
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5 seconds
+
+    // Set initial state
+    function initializeSlider() {
+        slides.forEach((slide, index) => {
+            slide.style.opacity = index === 0 ? '1' : '0';
+            slide.style.zIndex = index === 0 ? '1' : '0';
+        });
+        dots[0].classList.add('active');
+    }
+
+    // Change slide
+    function goToSlide(index) {
+        // Hide current slide
+        slides[currentSlide].style.opacity = '0';
+        slides[currentSlide].style.zIndex = '0';
+        dots[currentSlide].classList.remove('active');
+
+        // Show new slide
+        currentSlide = index;
+        slides[currentSlide].style.opacity = '1';
+        slides[currentSlide].style.zIndex = '1';
+        dots[currentSlide].classList.add('active');
+    }
+
+    // Next slide
+    function nextSlide() {
+        let next = (currentSlide + 1) % slides.length;
+        goToSlide(next);
+    }
+
+    // Add click events to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
+    });
+
+    // Initialize slider
+    initializeSlider();
+
+    // Start automatic slideshow
+    let slideshow = setInterval(nextSlide, slideInterval);
+
+    // Pause slideshow on hover
+    sliderContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideshow);
+    });
+
+    // Resume slideshow when mouse leaves
+    sliderContainer.addEventListener('mouseleave', () => {
+        slideshow = setInterval(nextSlide, slideInterval);
+    });
 }); 

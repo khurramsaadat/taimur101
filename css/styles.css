@@ -137,207 +137,190 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    height: 80vh;
     width: 100%;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
     overflow: hidden;
+    background-color: var(--primary-color);
 }
 
-.hero-image {
+/* Hero Slider */
+.hero-slider {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Lower z-index to stay behind */
+    z-index: 1;
+    overflow: hidden;
 }
 
-.hero-image img {
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+
+.slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    filter: brightness(0.3); /* Darkened slightly more for better contrast */
 }
 
+/* Navigation Dots */
+.slider-navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.nav-dot.active {
+    background: #ffffff;
+    transform: scale(1.2);
+}
+
+/* Hero Overlay - Make it darker */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.65); /* Increased opacity from 0.4 to 0.65 */
+    /* Optional: Add gradient for even better readability */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.75) 100%
+    );
+}
+
+/* Hero Content */
 .hero .container {
     position: relative;
     height: 100%;
-    z-index: 5; /* Higher z-index to stay on top */
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    /* padding-top: 80px; To account for the fixed navbar */
+    z-index: 3;
+    padding: 0 2rem;
 }
 
 .hero-content {
-    padding: 2rem;
-    color: white;
-    max-width: 900px;
-    z-index: 10; /* Highest z-index for content */
-    /* Remove the background-color if you want content directly on the image */
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
-    color: white;
     line-height: 1.2;
+    color: #ffffff;
 }
 
 .hero-content p {
-    font-size: 1.1rem;
-    color: white;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
     line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Slightly lighter text shadow for paragraph */
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-    .hero-content {
-        padding: 1rem;
-        width: 100%;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-        white-space: normal; /* Ensure text wraps */
-        word-wrap: break-word;
-        line-height: 1.5;
-        max-width: 100%;
-        padding: 0 15px;
-    }
-
-    .hero-content p br {
-        display: none; /* Remove forced line breaks */
-    }
-}
-
-/* Ensure proper line height for the two lines */
-.hero-content h1 br {
-    display: block;
-    content: "";
-}
-
-/* Ensure proper line breaks */
-.hero-content p br {
-    display: block;
-    content: "";
-    margin-bottom: 0.2rem; /* Add slight spacing between lines */
-}
-
-/* Button container */
 .hero-buttons {
-    position: relative;
-    z-index: 15; /* Even higher z-index for buttons */
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-top: 2rem;
 }
 
-/* Hero section buttons */
-.hero-content .primary-button,
-.hero-content .secondary-button {
-    padding: 1rem 2.5rem;     /* Increased padding */
-    font-size: 1.3rem;        /* Increased font size */
-    font-weight: 600;
-    margin: 0.5rem;
-    min-width: 200px;         /* Ensure buttons have good width */
+.primary-button, 
+.secondary-button {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* Responsive adjustments */
+.primary-button {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    border: none;
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.primary-button:hover {
+    background-color: var(--accent-color);
+}
+
+.secondary-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        height: 70vh;
-    }
-    
-    .hero-section {
-        padding-top: 35px;      /* Match navbar height */
-    }
-
-    .hero .container {
-        margin: 0;
-        padding: 0;
-    }
-
-    .hero-content {
-        padding: 1rem;
-        text-align: center;
-        width: 100%;
-    }
-
     .hero-content h1 {
-        font-size: 2rem; /* Slightly smaller font on mobile */
-        white-space: normal; /* Ensure text wraps */
-        word-wrap: break-word; /* Handle long words */
-        line-height: 1.3; /* Increased line height for better readability */
-        max-width: 100%; /* Ensure it doesn't overflow container */
-    }
-    
-    .hero-content br {
-        display: none; /* Remove any forced line breaks */
-    }
-
-    .hero-content .primary-button,
-    .hero-content .secondary-button {
-        padding: 0.5rem 0.5rem;   /* Minimal padding */
-        font-size: 1rem;        /* Smaller text */
-        min-width: 70px;           /* Reduced width */
-        margin: 0.1rem;            /* Smaller margin */
-    }
-
-    .hero-content .btn {
-        padding: 0.5rem 0.5rem;   /* Smaller padding */
-        font-size: 1rem;        /* Smaller button text */
-        min-width: 100px;           /* Reduced width */
-        margin: 0.15rem;
-    }
-
-    /* Button container adjustments */
-    .hero-content .btn-container {
-        margin-top: 0.6rem;        /* Less space above buttons */
-        gap: 0.3rem;               /* Smaller gap between buttons */
-    }
-
-    /* Ensure proper spacing with navbar */
-    .hero-section {
-        padding-top: 35px;      /* Match navbar height */
-    }
-
-    /* Additional adjustment for very small screens */
-    @media (max-width: 480px) {
-        .hero-content {
-            transform: translateY(-2.5rem);  /* Move up slightly more on phones */
-        }
-    }
-
-    .nav-links a::after {
-        display: none;
-    }
-}
-
-/* Even smaller screens */
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.8rem; /* Even smaller font for very small screens */
+        font-size: 2.5rem;
     }
     
     .hero-content p {
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
 
-    h2 {
-        font-size: 1.8rem;
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero-content .btn {
-        padding: 0.2rem 0.4rem;
-        font-size: 0.6rem;
-        min-width: 75px;
+    .primary-button, 
+    .secondary-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero .container {
+        padding: 0 1rem;
     }
 }
 
