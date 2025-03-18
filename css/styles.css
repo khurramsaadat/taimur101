@@ -2107,3 +2107,103 @@ h2 {
         margin-bottom: 0.6rem;
     }
 }
+
+/* Feasibility Hero Split Layout */
+.split-layout {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 4rem;
+    padding: 2rem 0;
+}
+
+.split-layout .text-content {
+    flex: 1; /* Takes up more space than the image */
+}
+
+.split-layout .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Aligns image to the right */
+    align-items: center;
+}
+
+.feasibility-diagram {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .split-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .split-layout .image-content {
+        justify-content: center; /* Centers image on mobile */
+    }
+
+    .feasibility-diagram {
+        max-width: 70%; /* Even smaller on mobile */
+    }
+}
+
+/* Container and Hero Section */
+.feasibility-hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    width: 100%;
+}
+
+.hero-content.split-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes space between elements */
+    gap: 4rem;
+    padding: 4rem 0;
+    width: 100%; /* Takes full width of container */
+}
+
+.split-layout .text-content {
+    flex: 1;
+    max-width: 1000px;
+}
+
+.split-layout .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.feasibility-diagram {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero-content.split-layout {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .split-layout .image-content {
+        justify-content: center;
+    }
+
+    .feasibility-diagram {
+        max-width: 70%;
+    }
+}
