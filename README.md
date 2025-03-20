@@ -1,6 +1,6 @@
-# Taimur Saadat Finance Website
+# Taimur Saadat - Financial Services Website
 
-A comprehensive financial services website showcasing investment expertise, trading courses, and professional services.
+A professional financial services website featuring real-time market data, advanced trading charts, and educational resources.
 
 ## Features
 
@@ -15,32 +15,36 @@ A comprehensive financial services website showcasing investment expertise, trad
 - Success page for form submissions
 - Social media integration
 
-## Technologies Used
+### Interactive Components
+- Responsive image slider with navigation controls
+- Dynamic navigation menu with dropdowns
+- Mobile-friendly design
 
-- HTML5
-- CSS3 with modern features:
-  - CSS Grid
-  - Flexbox
-  - CSS Variables
-  - Animations
-- JavaScript for interactive features
-- Netlify for hosting and form handling
-- Make.com for form notifications
+### Educational Resources
+- Trading and Technical Analysis courses
+- Derivatives and Portfolio Management courses
+- Feasibility Studies section
 
-## Development Environment
+### Key Sections
+1. **Market Overview**
+   - Live market indices tracking
+   - Customizable market data display
+   - Multi-market coverage
 
-- Operating System: Windows 11
-- IDE: Cursor AI
-- Version Control: Git
-- Browser Support: Chrome, Firefox, Safari, Edge
+2. **Advanced Charts**
+   - Professional-grade charting tools
+   - Technical analysis capabilities
+   - Symbol change functionality
 
-### Cursor AI Settings
-- Custom .cursorsettings for project configuration
-- AI-powered code completion
-- Integrated Git support
-- Enhanced code navigation
+3. **Courses**
+   - Trading and Technical Analysis (CMT Program)
+   - Derivatives and Portfolio Management
+   - Multiple certification levels
 
-## Pages
+4. **About**
+   - Professional background
+   - Industry expertise
+   - Qualifications and certifications
 
 1. Home Page (index.html)
    - Hero section
@@ -102,16 +106,11 @@ Regular updates for:
 - Performance optimization
 - Browser compatibility
 
-## Contributing
+- Operating System: Windows 11
+- IDE: Cursor AI
+- Version Control: Git
+- Browser Support: Chrome, Firefox, Safari, Edge
 
-Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
 
 ## License
-
-This project is proprietary and all rights are reserved.
-
-## Contact
-
-Taimur Saadat
-- Email: taimur101@yahoo.com
-- Location: Dubai, UAE
+© 2025 Taimur Saadat. All rights reserved.

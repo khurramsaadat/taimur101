@@ -2285,3 +2285,23 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(74, 111, 255, 0.1);
 }
+
+/* Market Overview Section */
+.market-overview-section {
+    padding: 4rem 0;
+    background: var(--dark-bg);
+}
+
+.market-overview-section .container {
+    max-width: 1400px; /* Match the width of Advanced Chart section */
+    margin: 0 auto;
+    padding: 0 15px; /* Add some padding for smaller screens */
+}
+
+.tradingview-widget-container {
+    margin-top: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(74, 111, 255, 0.1);
+}
